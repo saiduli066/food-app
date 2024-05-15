@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "image": "https://img.freepik.com/free-photo/assorted-nuts-dried-fruits-with-pecan-pistachios-almond-peanut-cashew-pine-nuts-top-view_176474-1977.jpg?t=st=1715281990~exp=1715285590~hmac=83b9c9d1eeb5b4fb6cf8d3646cc628d18555f48ac97d98f185d12a699e4aac88&w=740",
+      "title": "Nuts",
+      "category": "Food",
+      "quantity": "500g"
+    },
+    {
+      "id": 2,
+      "image": "https://img.freepik.com/free-photo/sack-rice-seed-with-white-rice-small-wooden-spoon-rice-plant_1150-35744.jpg?t=st=1715281111~exp=1715284711~hmac=5625a122ebda70daf83cab9db4639fa5607cf9b22e436560135e099dc942fb61&w=740",
+      "title": "Rice",
+      "category": "Food",
+      "quantity": "1kg"
+    },
+    {
+      "id": 3,
+      "image": "https://img.freepik.com/free-photo/toothbrush_144627-6535.jpg?t=st=1715281266~exp=1715284866~hmac=82fb08a1686f4db745a896d8913e7fba49a31e4328561e4d39f6e26a48e9cf52&w=740",
+      "title": "Toothpaste",
+      "category": "Hygiene Products",
+      "quantity": "200ml"
+    },
+    {
+      "id": 4,
+      "image": "https://th.bing.com/th/id/OIP.OMdpIceHDxs1zs1nRt3SQgHaHa?rs=1&pid=ImgDetMain",
+      "title": "Diapers",
+      "category": "Baby Essentials",
+      "quantity": "Pack of 20"
+    },
+    {
+      "id": 5,
+      "image": "https://img.freepik.com/free-photo/legumes-beans-assortment-different-bowls-light-stone-background-top-view-healthy-vegan-protein-food_114579-10740.jpg?t=st=1715281664~exp=1715285264~hmac=b0848a2812de55516ff11180b8615f7db1fcd08f2a0220ab8b508d09a8143045&w=740",
+      "title": "Canned Beans",
+      "category": "Food",
+      "quantity": "400g"
+    },
+    {
+      "id": 6,
+      "image": "https://img.freepik.com/free-photo/macro-shot-dried-grapes_23-2148263801.jpg?t=st=1715282158~exp=1715285758~hmac=3b8c20b0e0872c02b9a28a2214230f19bbc75d2a6dfd4df44887b0021a2561dd&w=740",
+      "title": "Dates",
+      "category": "Food",
+      "quantity": "500g"
+    },
+    {
+      "id": 7,
+      "image": "https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg?t=st=1715281727~exp=1715285327~hmac=eac41e48d4364340763679787c11952160a106ac5d8292d21ef356bf48da15c1&w=740",
+      "title": "Pasta",
+      "category": "Food",
+      "quantity": "500g"
+    },
+    {
+      "id": 8,
+      "image": "https://img.freepik.com/free-photo/plant-cotton-swabs-near-cosmetics-bottles_23-2147787956.jpg?t=st=1715281777~exp=1715285377~hmac=a9504d6cfd7d8624cc664648c4456d2df11c8e1df0c78966dcc61823820db611&w=740",
+      "title": "Shampoo",
+      "category": "Hygiene Products",
+      "quantity": "400ml"
+    },
+    {
+      "id": 9,
+      "image": "https://i5.walmartimages.com/asr/1d5732a5-2943-486e-95d2-24ed4eecdf65_2.12c7e523f956fa60370cb18edf30275c.jpeg",
+      "title": "Baby Wipes",
+      "category": "Baby Essentials",
+      "quantity": "Pack of 80"
+    },
+    {
+      "id": 10,
+      "image": "https://img.freepik.com/free-photo/pills-package_23-2147983066.jpg?t=st=1715282254~exp=1715285854~hmac=8f8f290e685f4192777ca693c0b7e4ddd8e1263f358accb6698e1c1f6956256b&w=740",
+      "title": "Basic Medicine",
+      "category": "Health and Medicine",
+      "quantity": "1 Box"
+    }
+  ]
+}

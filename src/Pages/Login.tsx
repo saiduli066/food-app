@@ -1,7 +1,6 @@
-import { FormEvent } from "react";
 import loginImg from "../assets/images/login-image.jpg";
 import loginIcon from "../assets/images/login_14018591.png";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -17,7 +16,7 @@ const Login = () => {
     formState: { errors },
   } = useForm<TInputs>();
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit: SubmitHandler<TInputs> = (e: TInputs) => {
     console.log(e);
   };
   return (

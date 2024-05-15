@@ -1,10 +1,15 @@
+import DashboardLayout from "@/Layouts/DashboardLayout";
 import MainLayouts from "@/Layouts/MainLayouts";
+import CreateSupply from "@/Pages/CreateSupply";
+import Dashboard from "@/Pages/Dashboard";
+import Home from "@/Pages/Home";
 import Login from "@/Pages/Login";
 import Register from "@/Pages/Register";
+import ViewDetails from "@/Pages/ViewDetails";
+import AllSupplies from "@/components/AllSupplies";
+import AllSupplyPage from "@/components/AllSupplyPage";
 import Container from "@/components/ui/Container";
-import path from "path";
 import { createBrowserRouter } from "react-router-dom";
-
 
 export const router = createBrowserRouter([
   {
@@ -16,23 +21,43 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
-        path: 'dashboard',
-        element:<h2>Dashboard</h2>,
+        index: true,
+        element: <Home />,
       },
       {
-        path: 'all-supply',
-        element:<h2>All Supply</h2>,
+        path: "supplies",
+        element: <AllSupplies />,
       },
       {
-        path: 'login',
-        element:<Login/>,
+        path: "/supplies/:id",
+        element: <ViewDetails _id={""} image={""} title={""} category={""} quantity={""} />,
       },
       {
-        path: 'register',
-        element:<Register/>,
+        path: "login",
+        element: <Login />,
       },
-      
-      
-    ]
+      {
+        path: "register",
+        element: <Register />,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,
+        element: <Dashboard />,
+      },
+      {
+        path: "supplies",
+        element: <AllSupplyPage />,
+      },
+      {
+        path: "create-supply",
+        element: <CreateSupply />,
+      },
+    ],
   },
 ]);

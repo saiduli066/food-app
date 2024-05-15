@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <div className="bg-[#FFF3CF] p-5">
+    <div className="bg-[#fff3cf3f] p-5 ">
       <div className="grid grid-cols-1 md:grid-cols-4 justify-evenly space-y-4 md:gap-4  text-justify">
         <div className="md:col-span-2 md:space-y-4">
           <h1 className="text-xl lg:text-3xl font-semibold ">

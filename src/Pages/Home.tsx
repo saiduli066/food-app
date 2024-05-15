@@ -1,13 +1,16 @@
-import Footer from "@/Pages/Footer";
-import Navbar from "@/Pages/Navbar";
-import { Outlet } from "react-router-dom";
-
+import Banner from "@/components/Banner/Banner";
+import Supply from "@/components/Supply";
+import TopDonar from "@/components/TopDonar/TopDonar";
+import AboutUs from "./AboutUs";
 const Home = () => {
+
+
   return (
-    <div>
-      <Navbar />
-      <Outlet />
-      <Footer />
+    <div className="w-full mx-auto">
+      <Banner />
+      <Supply />
+      <TopDonar />
+      <AboutUs/>
     </div>
   );
 };

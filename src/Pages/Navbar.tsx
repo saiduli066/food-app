@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-const [activeLink, setActiveLink] = useState("Home");
+const [activeLink, setActiveLink] = useState("");
 
   const toggleNavbar = () => {
     setIsNavOpen(!isNavOpen);
@@ -18,7 +18,7 @@ const [activeLink, setActiveLink] = useState("Home");
   return (
     <div className="flex justify-between items-center m-3">
       <div className="flex gap-3 items-center">
-        <div className="lg:hidden relative">
+        <div className="lg:hidden relative z-[100]">
           <button
             onClick={toggleNavbar}
             className="text-gray-500 focus:outline-none"
@@ -102,7 +102,7 @@ const [activeLink, setActiveLink] = useState("Home");
           Dashboard
         </NavLink>
         <NavLink
-          to="/all-supply"
+          to="/supplies"
           onClick={() => handleNavLinkClick("All Supplies")}
           className={`${
             activeLink === "All Supplies" ? "text-[#EA3F30]" : ""
