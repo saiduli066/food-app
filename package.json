@@ -16,6 +16,7 @@
     "@reduxjs/toolkit": "^2.2.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "firebase": "^10.12.2",
     "localforage": "^1.10.0",
     "lucide-react": "^0.363.0",
     "match-sorter": "^6.3.4",
@@ -28,6 +29,7 @@
     "recharts": "^2.12.7",
     "slick-carousel": "^1.8.1",
     "sort-by": "^0.0.2",
+    "sweetalert2": "^11.11.0",
     "swiper": "^11.1.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7"

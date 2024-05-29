@@ -2,6 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { TProducts } from "@/components/Supply";
 import { usePostProductsMutation } from "@/redux/features/Api/data";
+import Swal from "sweetalert2";
 
 const CreateSupply = () => {
   const {
@@ -15,6 +16,12 @@ const CreateSupply = () => {
   const onSubmit: SubmitHandler<TProducts> = async (product:TProducts) => {
     await postProducts(product).unwrap();
     reset();
+    Swal.fire({
+      icon: "success",
+      title: "Product added successfully!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   return (

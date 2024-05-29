@@ -5,15 +5,15 @@ import { Outlet } from "react-router-dom";
 const DashboardLayout = () => {
   return (
     <Container>
-         <div className="flex gap-4 w-full">
-      <div className="w-[15%]">
-        <Sidebar />
+      <div className="flex gap-4 w-full">
+        <div className="w-[15%]">
+          <Sidebar />
+        </div>
+        <div className="w-[85%]">
+          <Outlet />
+        </div>
       </div>
-      <div className="w-[85%]">
-        <Outlet />
-      </div>
-    </div>
- </Container>
+    </Container>
   );
 };
 

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "@/firebase/useAuth";
 
 const Navbar = () => {
+  const { logOut,user } = useAuth();
   const [isNavOpen, setIsNavOpen] = useState(false);
 const [activeLink, setActiveLink] = useState("");
 
@@ -112,10 +114,11 @@ const [activeLink, setActiveLink] = useState("");
         </NavLink>
       </div>
 
-      <div>
-        <Link to="/login">
+      <div>{user?
+                  <Button onClick={logOut} className="btn hover:bg-[#db3f31] ">Logout</Button>
+:<Link to="/login">
           <Button className="btn hover:bg-[#db3f31] ">Login</Button>
-        </Link>
+        </Link>}
       </div>
     </div>
   );

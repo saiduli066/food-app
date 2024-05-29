@@ -2,7 +2,9 @@ import loginImg from "../assets/images/login-image.jpg";
 import loginIcon from "../assets/images/login_14018591.png";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import GoogleLogin from "./GoogleLogin";
+import useAuth from "@/firebase/useAuth";
 
 type TInputs = {
   email: string;
@@ -10,6 +12,11 @@ type TInputs = {
 };
 
 const Login = () => {
+  const { signIn, user } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location?.state?.from?.pathname || '/';
   const {
     register,
     handleSubmit,
@@ -18,6 +25,15 @@ const Login = () => {
 
   const onSubmit: SubmitHandler<TInputs> = (e: TInputs) => {
     console.log(e);
+    signIn(e.email, e.password).then((result) => {
+      if (user) {
+      return  navigate(from)
+      }
+    }).catch((err) => {
+      console.log(err);
+    });
+    
+
   };
   return (
     <div className=" w-full mb-10 flex flex-col md:flex-row justify-center items-center gap-3 md:gap-4">
@@ -73,14 +89,20 @@ const Login = () => {
                 Login
               </Button>
             </div>
-            <p className="text-[14px]">
-              don't have an account?{" "}
-              <Link to="/register" className="underline cursor-pointer">
-                sign up here
-              </Link>
-            </p>
           </div>
         </form>
+        <div className="my-4">
+          <p className="text-[14px] mb-2">or login with google</p>
+          <div>
+            <GoogleLogin />
+          </div>
+        </div>
+        <p className="text-[14px]">
+          don't have an account?{" "}
+          <Link to="/register" className="underline cursor-pointer">
+            sign up here
+          </Link>
+        </p>
       </div>
     </div>
   );

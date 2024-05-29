@@ -10,7 +10,7 @@ import AllSupplies from "@/components/AllSupplies";
 import AllSupplyPage from "@/components/AllSupplyPage";
 import Container from "@/components/ui/Container";
 import { createBrowserRouter } from "react-router-dom";
-
+import PrivateRoutes from "./PrivateRoutes";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -30,7 +30,15 @@ export const router = createBrowserRouter([
       },
       {
         path: "/supplies/:id",
-        element: <ViewDetails _id={""} image={""} title={""} category={""} quantity={""} />,
+        element: (
+          <ViewDetails
+            _id={""}
+            image={""}
+            title={""}
+            category={""}
+            quantity={""}
+          />
+        ),
       },
       {
         path: "login",
@@ -48,15 +56,27 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Dashboard />,
+        element: (
+          <PrivateRoutes>
+            <Dashboard />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "supplies",
-        element: <AllSupplyPage />,
+        element: (
+          <PrivateRoutes>
+            <AllSupplyPage />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "create-supply",
-        element: <CreateSupply />,
+        element: (
+          <PrivateRoutes>
+            <CreateSupply />
+          </PrivateRoutes>
+        ),
       },
     ],
   },
